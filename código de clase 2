@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main ()
+{
+  float x; 
+  x=(3+2)/2.0 * 5/7.0;
+
+printf("x=%f\n", x);
+return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main ()
+{
+   //Declaración de variables
+   int x, y, z;
+  x= 3;
+  y= 4;
+    z= x + y;
+   printf ("z= %d", z);
+  return 0;
+  }
