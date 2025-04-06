@@ -1,0 +1,75 @@
+# include <iostream>
+
+# include <string>
+
+# include <vector>
+
+using namespace std;
+
+int main() {
+
+  string tipoPizza;
+
+  string ingredienteAdicional;
+
+  vector<string> ingredientes;
+
+  // Pedir al usuario el tipo de pizza
+
+  cout << "¿Desea una pizza vegetariana o no vegetariana? (vegetariana/no vegetariana): ";
+
+  cin >> tipoPizza;
+
+  // Mostrar el menú de ingredientes según el tipo de pizza
+
+  if (tipoPizza == "vegetariana") {
+
+    cout << "\nIngredientes vegetarianos disponibles: Pimiento, Tofu" << endl;
+
+    cout << "Elija un ingrediente adicional: ";
+
+    cin >> ingredienteAdicional;
+
+    ingredientes.push_back("Mozzarella");
+
+    ingredientes.push_back("Tomate");
+
+    ingredientes.push_back(ingredienteAdicional);
+
+  } else if (tipoPizza == "no vegetariana") {
+
+    cout << "\nIngredientes no vegetarianos disponibles: Peperoni, Jamón, Salmón" << endl;
+
+    cout << "Elija un ingrediente adicional: ";
+
+    cin >> ingredienteAdicional;
+
+    ingredientes.push_back("Mozzarella");
+
+    ingredientes.push_back("Tomate");
+
+    ingredientes.push_back(ingredienteAdicional);
+
+  } else {
+
+    cout << "Tipo de pizza inválido." << endl;
+
+    return 1; // Indica un error
+
+  }
+
+  // Mostrar los ingredientes de la pizza
+
+  cout << "\nIngredientes de su pizza:" << endl;
+
+  for (const string& ingrediente : ingredientes) {
+
+    cout << "- " << ingrediente << endl;
+
+  }
+
+  cout << (tipoPizza == "vegetariana" ? "Su pizza es vegetariana." : "Su pizza no es vegetariana.") << endl;
+
+  return 0;
+
+}
